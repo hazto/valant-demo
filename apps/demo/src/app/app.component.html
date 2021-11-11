@@ -5,4 +5,12 @@
 <main>
   <h2>Hi there</h2>
   <p>Thanks for being you.</p>
+  <!-- todo: break out into componnent-->
+  <label for="maze-selector">Select a Maze</label>
+  <ul id="maze-selector">
+    <li *ngFor="let name of mazeNames" (click)="select(name)">{{name}}</li>
+  </ul>
+  <!-- todo: break out into component-->
+  <label for="upload">Upload Your Maze!</label>
+  <input type="file" id="upload" accept="application/JSON" (change)="uploadFile($event.target.files)">
 </main>
